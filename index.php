@@ -35,33 +35,33 @@
 		</tr>
 		<tr>
 			<td id="account" valign = top>
-				<h2 id="accountTitle" style="margin-top: 8px; margin-bottom: 8px">Sign up</h2>
-				<div id ="signUp" style="display: block">
+				<h2 id="accountTitle" style="margin-top: 8px; margin-bottom: 8px">Log in</h2>
+				<p id="error" style="color: red; display: none" />
+				<div id ="signUp" style="display: none">
 					<form>
-						<input type="text" placeholder="username..." style="width: 115px;  margin-bottom: 8px"/><br>
-						<input type="text" placeholder="email..." style="width: 115px;  margin-bottom: 8px"/><br>
-						<input type="password" placeholder="password..." style="width: 115px;  margin-bottom: 8px"/><br>
-						<input type="password" placeholder="repeat password..." style="width: 115px;  margin-bottom: 8px"/><br>
-						<input type="button" value="Submit"/>
+						<input type="text" id="username" placeholder="username..." style="width: 115px;  margin-bottom: 8px"/><br>
+						<input type="text" id="email" placeholder="email..." style="width: 115px;  margin-bottom: 8px"/><br>
+						<input type="password" id="password" placeholder="password..." style="width: 115px;  margin-bottom: 8px"/><br>
+						<input type="password" id="passwordR" placeholder="repeat password..." style="width: 115px;  margin-bottom: 8px"/><br>
+						<input type="button" id="suBut" value="Submit"/>
 					</form>
 					<p id="aha" style="text-decoration: underline; margin-top: 4px; margin-bottom: 8px">Already have an account? Log in.</p>
 				</div>
-				<div id="logIn" style="display: none">
+				<div id="logIn" style="display: block">
 					<form>
-						<input type="text" placeholder="username/email..." style="width: 115px;  margin-bottom: 8px"/><br>
-						<input type="password" placeholder="password..." style="width: 115px;  margin-bottom: 8px"/><br>
-						<input type="button" value="Log in"/>
+						<input type="text" id="usernameL" placeholder="username/email..." style="width: 115px;  margin-bottom: 8px"/><br>
+						<input type="password" id="passwordL" placeholder="password..." style="width: 115px;  margin-bottom: 8px"/><br>
+						<input type="button" id="liBut" value="Log in"/>
 					</form>
 					<p id="dha" style="text-decoration: underline; margin-top: 4px; color: blue">Don't have an account? Sign up.</p>
 				</div>
 				<div id="loggedIn" style="display: none">
-					<form>
-						<input type="button" value="hello"/>
-					</form>
+					<p id="userSince" style="display: none;  margin-bottom: 8px"></p>
+					<input id="loBut" type="button" value="hello"/>
 				</div>
 			</td>
 			<td id ="playCell" valign="top">
-				<h2 id="playTitle" style="margin-top: 8px; margin-bottom: 8px">Play</h2>
+				<h2 id="playTitle" style="margin-top: 8px;  margin-bottom: 8px">Play</h2>
 				<div id="playSelect" style="display: block">
 					<label>Game type:</label><br>
 					<select class="gameList" id="selectGame" style="width: 75px; margin-bottom: 8px;">
@@ -93,12 +93,12 @@
 					<p>Log in to track your wins and achievements across sessions!</p>
 				</div>
 				<div id="statLogged" style="display: none">
-					<p></p>
+					<p id="statsTable"/>
 				</div>
 			</td>
 		</tr>
 	</table>
 </div>
-
+<p id="passValue" style="display: none;"></p>
 </body>
 </html>
